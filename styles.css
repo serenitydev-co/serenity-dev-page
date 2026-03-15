@@ -107,6 +107,63 @@ h3 {
   font-size: 2rem;
 }
 
+.brandmark--animated-header {
+  display: block;
+  width: clamp(190px, 22vw, 260px);
+  height: 40px;
+}
+
+.brandmark--animated-header svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+.brandmark--animated-header text {
+  fill: rgba(16, 23, 34, 0);
+  stroke: rgba(16, 23, 34, 1);
+  stroke-width: 1.6;
+  stroke-dasharray: 0 50%;
+  stroke-dashoffset: 25%;
+  paint-order: stroke fill;
+  font-family: "Russo One", "Arial Black", sans-serif;
+  font-size: 102px;
+  letter-spacing: 0.01em;
+  animation: brandmark-stroke-ink 8s ease-in-out infinite alternate;
+}
+
+@keyframes brandmark-stroke-ink {
+  0% {
+    fill: rgba(16, 23, 34, 0);
+    stroke: rgba(16, 23, 34, 1);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 1.8;
+  }
+
+  45% {
+    fill: rgba(16, 23, 34, 0);
+    stroke: rgba(16, 23, 34, 1);
+  }
+
+  60% {
+    fill: rgba(16, 23, 34, 1);
+    stroke: rgba(16, 23, 34, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+
+  100% {
+    fill: rgba(16, 23, 34, 1);
+    stroke: rgba(16, 23, 34, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
+
 .site-nav {
   display: inline-flex;
   justify-content: center;
@@ -617,6 +674,15 @@ ol {
 
   .brand__name {
     font-size: 1.6rem;
+  }
+
+  .brandmark--animated-header {
+    width: clamp(164px, 50vw, 212px);
+    height: 34px;
+  }
+
+  .brandmark--animated-header text {
+    font-size: 102px;
   }
 
   .site-nav,
