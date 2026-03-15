@@ -314,12 +314,13 @@ h1 {
   width: min(92%, 440px);
   display: grid;
   place-items: center;
-  opacity: 0.12;
+  opacity: 0.18;
 }
 
 .hero__symbol-frame img {
   width: 100%;
   max-width: 420px;
+  filter: saturate(1.02);
 }
 
 .section,
