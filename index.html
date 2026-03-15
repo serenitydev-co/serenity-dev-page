@@ -29,13 +29,57 @@
           />
           <span class="brand__name">Serenity Dev</span>
         </a>
-        <nav class="site-nav" aria-label="Primary">
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#method">Method</a>
+          <a href="#contact">Contact</a>
+          <a class="site-nav__cta" href="mailto:email@serenitydev.co">Start a conversation</a>
+        </nav>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a class="header-cta" href="mailto:email@serenitydev.co">Start a conversation</a>
+      </header>
+      <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu__header">
+          <a class="brand" href="#top" aria-label="Serenity Dev home">
+            <img
+              class="brand__symbol"
+              src="./assets/serenity-dev-symbol.svg"
+              alt=""
+              width="28"
+              height="28"
+            />
+            <span class="brand__name">Serenity Dev</span>
+          </a>
+          <button class="mobile-menu__close" type="button" aria-label="Close navigation menu">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <nav class="mobile-menu__nav" aria-label="Mobile primary">
           <a href="#services">Services</a>
           <a href="#method">Method</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a class="header-cta" href="mailto:email@serenitydev.co">Start a conversation</a>
-      </header>
+        <div class="mobile-menu__footer">
+          <img
+            class="mobile-menu__symbol"
+            src="./assets/serenity-dev-symbol.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <a class="mobile-menu__cta" href="mailto:email@serenitydev.co">Start a conversation</a>
+        </div>
+      </aside>
 
       <main id="top">
         <section class="hero panel panel--hero">
@@ -187,5 +231,6 @@
         </section>
       </main>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
