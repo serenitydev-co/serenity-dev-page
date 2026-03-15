@@ -29,10 +29,23 @@ body {
   background:
     linear-gradient(rgba(16, 23, 34, 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(16, 23, 34, 0.045) 1px, transparent 1px),
-    radial-gradient(circle at top left, rgba(23, 224, 164, 0.07), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(245, 64, 129, 0.06), transparent 26%),
+    radial-gradient(
+      circle at top left,
+      rgba(23, 224, 164, 0.07),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(245, 64, 129, 0.06),
+      transparent 26%
+    ),
     var(--bg);
-  background-size: var(--grid-size) var(--grid-size), var(--grid-size) var(--grid-size), auto, auto, auto;
+  background-size:
+    var(--grid-size) var(--grid-size),
+    var(--grid-size) var(--grid-size),
+    auto,
+    auto,
+    auto;
 }
 
 body.is-menu-open {
@@ -91,7 +104,7 @@ h3 {
 }
 
 .brand__name {
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 .site-nav {
@@ -165,12 +178,18 @@ h3 {
   border: 1px solid var(--ink);
   font-weight: 700;
   font-size: 0.95rem;
-  transition: transform 180ms ease, background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease;
 }
 
 .menu-toggle span,
 .site-nav {
-  transition: transform 180ms ease, opacity 180ms ease;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
 }
 
 .header-cta:hover,
@@ -314,13 +333,39 @@ h1 {
   width: min(92%, 440px);
   display: grid;
   place-items: center;
-  opacity: 0.18;
+  opacity: 1;
+  isolation: isolate;
+}
+
+.hero__symbol-frame::before {
+  content: "";
+  position: absolute;
+  inset: 16% 14%;
+  z-index: -1;
+  background:
+    radial-gradient(
+      circle at 30% 38%,
+      rgba(23, 224, 164, 0.62),
+      transparent 74%
+    ),
+    radial-gradient(
+      circle at 72% 52%,
+      rgba(245, 64, 129, 0.6),
+      transparent 96%
+    ),
+    radial-gradient(circle at 50% 72%, rgba(16, 23, 34, 0.16), transparent 52%);
+  filter: blur(54px);
+  transform: translateY(12px) scale(1.02);
+  opacity: 0.95;
+  pointer-events: none;
 }
 
 .hero__symbol-frame img {
   width: 100%;
   max-width: 420px;
-  filter: saturate(1.02);
+  filter: drop-shadow(0 18px 34px rgba(23, 224, 164, 0.18))
+    drop-shadow(0 28px 38px rgba(245, 64, 129, 0.16));
+  opacity: 0.95;
 }
 
 .section,
@@ -338,7 +383,10 @@ h1 {
     linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
     linear-gradient(180deg, rgba(18, 23, 34, 0.98), rgba(18, 23, 34, 1));
-  background-size: 36px 36px, 36px 36px, auto;
+  background-size:
+    36px 36px,
+    36px 36px,
+    auto;
   color: var(--surface-strong);
   border-color: rgba(255, 255, 255, 0.09);
 }
@@ -466,7 +514,10 @@ ol {
     linear-gradient(90deg, rgba(16, 23, 34, 0.03) 1px, transparent 1px),
     linear-gradient(rgba(16, 23, 34, 0.03) 1px, transparent 1px),
     rgba(255, 255, 255, 0.86);
-  background-size: 18px 18px, 18px 18px, auto;
+  background-size:
+    18px 18px,
+    18px 18px,
+    auto;
   font-family: "Russo One", "Arial Black", sans-serif;
   font-size: 1.02rem;
   line-height: 1.15;
@@ -565,7 +616,7 @@ ol {
   }
 
   .brand__name {
-    font-size: 0.95rem;
+    font-size: 1.6rem;
   }
 
   .site-nav,
@@ -586,15 +637,31 @@ ol {
     background:
       linear-gradient(rgba(16, 23, 34, 0.03) 1px, transparent 1px),
       linear-gradient(90deg, rgba(16, 23, 34, 0.03) 1px, transparent 1px),
-      radial-gradient(circle at 18% 100%, rgba(23, 224, 164, 0.05), transparent 28%),
-      radial-gradient(circle at 100% 100%, rgba(245, 64, 129, 0.05), transparent 30%),
+      radial-gradient(
+        circle at 18% 100%,
+        rgba(23, 224, 164, 0.05),
+        transparent 28%
+      ),
+      radial-gradient(
+        circle at 100% 100%,
+        rgba(245, 64, 129, 0.05),
+        transparent 30%
+      ),
       rgba(255, 255, 255, 0.98);
-    background-size: 28px 28px, 28px 28px, auto, auto, auto;
+    background-size:
+      28px 28px,
+      28px 28px,
+      auto,
+      auto,
+      auto;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transform: translateY(-8px);
-    transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
+    transition:
+      opacity 180ms ease,
+      transform 180ms ease,
+      visibility 180ms ease;
     z-index: 40;
   }
 
@@ -680,7 +747,11 @@ ol {
     font-weight: 800;
     color: var(--surface-strong);
     border: 1px solid rgba(16, 23, 34, 0.04);
-    background: linear-gradient(90deg, rgba(23, 224, 164, 0.9), rgba(245, 64, 129, 0.92));
+    background: linear-gradient(
+      90deg,
+      rgba(23, 224, 164, 0.9),
+      rgba(245, 64, 129, 0.92)
+    );
   }
 
   h1 {
@@ -710,6 +781,22 @@ ol {
 
   .hero__symbol-frame {
     width: min(72%, 240px);
+  }
+
+  .hero__symbol-frame::before {
+    inset: 8% 6%;
+    background:
+      radial-gradient(circle at 30% 38%, rgba(23, 224, 164, 0.5), transparent 44%),
+      radial-gradient(circle at 72% 52%, rgba(245, 64, 129, 0.48), transparent 46%),
+      radial-gradient(circle at 50% 72%, rgba(16, 23, 34, 0.24), transparent 52%);
+    filter: blur(24px);
+    transform: translateY(10px) scale(1.08);
+  }
+
+  .hero__symbol-frame img {
+    filter:
+      drop-shadow(0 18px 30px rgba(23, 224, 164, 0.28))
+      drop-shadow(0 26px 34px rgba(245, 64, 129, 0.24));
   }
 
   .button,
