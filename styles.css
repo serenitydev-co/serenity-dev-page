@@ -72,7 +72,6 @@ img {
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: 24px;
   padding: 18px 22px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.7);
@@ -90,8 +89,8 @@ img {
 }
 
 .brand__symbol {
-  width: 28px;
-  height: 28px;
+  width: 34px;
+  height: 34px;
 }
 
 .brand__name,
@@ -666,7 +665,6 @@ ol {
   .site-header {
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 14px;
     top: 8px;
     padding-top: 14px;
     padding-bottom: 14px;
@@ -852,16 +850,27 @@ ol {
   .hero__symbol-frame::before {
     inset: 8% 6%;
     background:
-      radial-gradient(circle at 30% 38%, rgba(23, 224, 164, 0.5), transparent 44%),
-      radial-gradient(circle at 72% 52%, rgba(245, 64, 129, 0.48), transparent 46%),
-      radial-gradient(circle at 50% 72%, rgba(16, 23, 34, 0.24), transparent 52%);
+      radial-gradient(
+        circle at 30% 38%,
+        rgba(23, 224, 164, 0.5),
+        transparent 44%
+      ),
+      radial-gradient(
+        circle at 72% 52%,
+        rgba(245, 64, 129, 0.48),
+        transparent 46%
+      ),
+      radial-gradient(
+        circle at 50% 72%,
+        rgba(16, 23, 34, 0.24),
+        transparent 52%
+      );
     filter: blur(24px);
     transform: translateY(10px) scale(1.08);
   }
 
   .hero__symbol-frame img {
-    filter:
-      drop-shadow(0 18px 30px rgba(23, 224, 164, 0.28))
+    filter: drop-shadow(0 18px 30px rgba(23, 224, 164, 0.28))
       drop-shadow(0 26px 34px rgba(245, 64, 129, 0.24));
   }
 
