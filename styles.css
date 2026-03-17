@@ -659,7 +659,6 @@ ol {
   .site-header {
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 14px;
     top: 10px;
     padding-top: 14px;
     padding-bottom: 14px;
@@ -852,7 +851,7 @@ ol {
   .section,
   .section--cta {
     padding-left: 18px;
-    padding-right: 18px;
+    padding-right: 14px;
   }
 
   .site-header {
